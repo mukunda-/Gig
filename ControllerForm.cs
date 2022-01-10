@@ -82,6 +82,7 @@ namespace Gig
 
       private void ControllerForm_Load(object sender, EventArgs e)
       {
+         GigList.Focus();
          AdjustPositionToOwner();
 
          Program.clockManager.GetActiveClock().Stop();
@@ -120,6 +121,7 @@ namespace Gig
          Program.clockManager.SetActiveClock(clock);
          UpdatePausedLabel();
          RefreshClockList();
+         GigList.Focus();
       }
 
       private void GigList_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,6 +153,7 @@ namespace Gig
          paused.Start();
          UpdatePausedLabel();
          RefreshClockList();
+         GigList.Focus();
       }
 
       private void SetTimeButton_Click(object sender, EventArgs e)
@@ -174,6 +177,7 @@ namespace Gig
 
          UpdatePausedLabel();
          RefreshClockList();
+         GigList.Focus();
       }
 
       private void ControllerForm_KeyDown(object sender, KeyEventArgs e)
